@@ -218,7 +218,7 @@ button[type="submit"] {
       hsl(217, 82%, 60%)
     );
 
-  &:hover {
+  &:--interact {
     border-color: hsl(221, 59%, 45%);
     background-color: hsl(217, 80%, 56%);
     background-image:
@@ -227,6 +227,12 @@ button[type="submit"] {
       hsl(217, 80%, 56%)
       );
   }
+
+  &:focus {
+    box-shadow: inset 0 0 0 1px #fff;
+  }
+
+
 }
 
 [role="toolbar"] button:first-child:not(:only-child) {

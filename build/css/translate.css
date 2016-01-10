@@ -250,9 +250,11 @@ button[type="submit"] {
       hsl(217, 99%, 65%),
       hsl(217, 82%, 60%)
     );
+
+
 }
 
-button[type="submit"]:hover {
+button[type="submit"]:hover, button[type="submit"]:focus {
   border-color: hsl(221, 59%, 45%);
   background-color: hsl(217, 80%, 56%);
   background-image:
@@ -265,6 +267,10 @@ button[type="submit"]:hover {
       hsl(217, 99%, 65%),
       hsl(217, 80%, 56%)
       );
+}
+
+button[type="submit"]:focus {
+  box-shadow: inset 0 0 0 1px #fff;
 }
 
 [role="toolbar"] button:first-child:not(:only-child) {
