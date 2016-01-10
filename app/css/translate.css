@@ -205,11 +205,11 @@ button[type="submit"] {
   padding-left: 0.8em;
   border-color: hsl(217, 84%, 56%);
   color: #fff;
-  background-color: hsl(217, 99%, 65%);
+  background-color: hsl(217, 99%, 63%);
   background-image:
     linear-gradient(to bottom,
-      hsl(217, 99%, 65%),
-      hsl(217, 82%, 60%)
+      hsl(217, 99%, 63%),
+      hsl(217, 82%, 56%)
     );
 
   &:--interact {
