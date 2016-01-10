@@ -3,6 +3,7 @@
   --textarea-height: 8rem;
 
   @custom-selector :--translate-area textarea, output;
+  @custom-selector :--interact :hover, :focus;
 }
 
 html {
@@ -168,7 +169,6 @@ button {
   &:focus,
   &:hover {
     position: relative;
-    z-index: 2;
     border-color: hsl(0, 0%, 78%);
     outline: none;
     color: #333;
@@ -199,6 +199,10 @@ button {
         hsl(0, 0%, 88%)
       );
   }
+}
+
+:not([aria-selected]) + button:--interact {
+  z-index: 2;
 }
 
 button[type="submit"] {
