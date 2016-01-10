@@ -79,21 +79,9 @@ img {
   max-width: 100%;
 }
 
-form {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 fieldset {
   margin: 0;
   padding: 0;
-  width: calc(50% - 0.2em);
   border: 0;
 }
 
@@ -112,7 +100,7 @@ button:focus {
 }
 
 button[type="submit"] {
-
+  display: none;
 }
 
 textarea, output {
@@ -290,4 +278,31 @@ button[type="submit"]:focus {
 [role="toolbar"] button + button {
   margin-left: -1px;
   /*border-left-width: 0;*/
+}
+
+@media (max-width: 40em) {
+  fieldset + fieldset {
+    margin-top: 1em;
+  }
+}
+
+@media (min-width: 40em) {
+  form {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  fieldset {
+    width: calc(50% - 0.2em);
+  }
+
+  button[type="submit"] {
+    display: inline-block;
+  }
 }

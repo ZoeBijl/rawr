@@ -70,15 +70,9 @@ img {
   max-width: 100%;
 }
 
-form {
-  display: flex;
-  justify-content: space-between;
-}
-
 fieldset {
   margin: 0;
   padding: 0;
-  width: calc(50% - 0.2em);
   border: 0;
 }
 
@@ -103,7 +97,7 @@ button {
 }
 
 button[type="submit"] {
-
+  display: none;
 }
 
 :--translate-area {
@@ -252,4 +246,25 @@ button[type="submit"] {
 [role="toolbar"] button + button {
   margin-left: -1px;
   /*border-left-width: 0;*/
+}
+
+@media (max-width: 40em) {
+  fieldset + fieldset {
+    margin-top: 1em;
+  }
+}
+
+@media (min-width: 40em) {
+  form {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  fieldset {
+    width: calc(50% - 0.2em);
+  }
+
+  button[type="submit"] {
+    display: inline-block;
+  }
 }
