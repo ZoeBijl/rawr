@@ -11,5 +11,12 @@
     "en": "I need a hug",
     "fr": "j'ai besoin d'un câlin",
     "nl": "Ik kan een knuffel gebruiken"
+  },
+
+  "roar": {
+    "dk": "Jeg er vred!",
+    "en": "I'm angry!",
+    "fr": "Je suis en colère!",
+    "nl": "Ik ben boos!"
   }
 }
