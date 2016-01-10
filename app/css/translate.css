@@ -1,6 +1,6 @@
 :root {
   --textarea-width: 100%;
-  --textarea-height: 4.5em;
+  --textarea-height: 8rem;
 
   @custom-selector :--translate-area textarea, output;
 }
@@ -51,12 +51,12 @@ header {
 }
 
 main {
-  padding: 0 2em;
+  padding: 0 2rem;
 }
 
 h1 {
-  margin: 0 -2em;
-  padding: 0.625em 2em;
+  margin: 0 -2rem;
+  padding: 0.625em 2rem;
   border-bottom: 1px solid hsl(0, 0%, 90%);
   color: hsl(10, 72%, 53%);
   font-size: 1.25em;
@@ -111,6 +111,7 @@ button[type="submit"] {
   width: var(--textarea-width);
   height: var(--textarea-height);
   color: #222;
+  font-family: inherit;
   font-size: 1.5em;
 }
 
