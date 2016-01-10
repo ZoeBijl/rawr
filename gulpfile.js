@@ -5,7 +5,7 @@ var connect = require('gulp-connect');
 var postcss = require('gulp-postcss');
 
 gulp.task('css', function () {
-  return gulp.src('app/css/core.css')
+  return gulp.src('app/css/*.css')
       .pipe(postcss([
         // import MUST be before custom-properties for variables to work
         require('postcss-import'),
@@ -27,7 +27,7 @@ gulp.task('css', function () {
 });
 
 gulp.task('minify', function () {
-  return gulp.src('build/css/core.css')
+  return gulp.src('build/css/*.css')
     .pipe(nano())
     .pipe(rename('style.css'))
     .pipe(gulp.dest('sortedam'));

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rawr Translate</title>
+
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Translate dinosaur into human languages">
+  <meta name="keywords" content="translate, dinosaur, language">
+
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <link rel="stylesheet" href="css/translate.css">
+</head>
+<body>
+  <header>
+    <a href="http://rawr.eu"><img src="images/rawr.svg" alt="Rawr logo" height="40px"></a>
+
+    <p>Zoë <img src="images/Zoe.jpg" alt="Portrait of Zoe" width="32px" height="32px"></p>
+  </header>
+  <main>
+    <h1>Translate</h1>
+    <form action="#" method="get">
+      <fieldset>
+        <legend>Translation input</legend>
+
+        <div role="toolbar" aria-label="Translate input settings">
+          <button type="button" id="detect-button" aria-selected="true">Detect language</button>
+          <!-- <button>
+            <span>Switch language</span>
+          </button> -->
+        </div>
+        <label>
+          <span>What would you like to translate?</span>
+          <textarea id="translation-input"></textarea>
+        </label>
+      </fieldset>
+      <fieldset id="translation-result">
+        <legend id="translation-result-label">Translation output</legend>
+        <div role="toolbar" aria-label="Translate output settings">
+          <div role="group">
+            <button type="button" aria-selected="true" data-lang="en">English</button>
+            <button type="button" data-lang="nl">Dutch</button>
+            <button type="button" data-lang="fr">French</button>
+            <button type="button" data-lang="dk">Danish</button>
+          </div>
+          <button type="submit">Translate</button>
+        </div>
+
+        <output id="translation-output" aria-labelledby="translation-result-label"></output>
+      </fieldset>
+    </form>
+  </main>
+  <script src="js/translate.js" charset="utf-8"></script>
+</body>
+</html>
