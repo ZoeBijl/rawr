@@ -60,7 +60,7 @@
 
     switch (value) {
       case 'rawr':
-      case 'rawrrr':
+      case 'roar':
       case 'grrr':
         translate(value);
         break;
