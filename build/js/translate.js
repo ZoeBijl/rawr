@@ -9,7 +9,7 @@
 
   var languageToolbar = document.getElementById('translation-result');
   var languageButtons = Array.prototype.slice.call(languageToolbar.querySelectorAll('[data-lang]'), 0);
-  var selectedToLanguage = languageToolbar.querySelectorAll('[aria-selected="true"]')[0].getAttribute('data-lang');
+  var selectedToLanguage = languageToolbar.querySelectorAll('[aria-pressed="true"]')[0].getAttribute('data-lang');
 
   var request = new XMLHttpRequest();
   request.open('GET', '../data/translate.json', true);
@@ -45,24 +45,27 @@
     var element = this;
     selectedToLanguage = element.getAttribute('data-lang');
     resetAriaSelected();
-    element.setAttribute('aria-selected', 'true');
+    element.setAttribute('aria-pressed', 'true');
     inputChangeHandler();
   };
 
   function resetAriaSelected() {
     languageButtons.forEach(function(button) {
-      button.removeAttribute('aria-selected');
+      button.removeAttribute('aria-pressed');
     });
   };
 
   function inputChangeHandler() {
-    var value = input.value.toLowerCase();
+    var value = input.value;
 
-    switch (value) {
+    var valueStart = value.split(' ', 2)[0].toLowerCase();
+    var valuePlus = value.split(' ', 2)[1];
+
+    switch (valueStart) {
       case 'rawr':
       case 'roar':
       case 'grrr':
-        translate(value);
+        translate(valueStart, valuePlus);
         break;
       default:
         clearTranslation();
@@ -70,9 +73,15 @@
     }
   };
 
-  function translate(value) {
-    var key = data[value];
+  function translate(valueStart, valuePlus) {
+    var key = data[valueStart];
     var translation = key[selectedToLanguage];
+
+    if (valuePlus) {
+      key = data[valueStart + '+'];
+      translation = key[selectedToLanguage].replace('%s', valuePlus);
+    }
+
     output.innerHTML = translation;
     detectButton.innerHTML = "Dinosaur - detected";
   };

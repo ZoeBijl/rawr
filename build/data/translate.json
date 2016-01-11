@@ -6,11 +6,25 @@
     "nl": "Ik houd van je"
   },
 
+  "rawr+": {
+    "dk": "Jeg elsker %s",
+    "en": "I love %s",
+    "fr": "Je t'aime %s",
+    "nl": "Ik houd van %s"
+  },
+
   "grrr": {
     "dk": "Jeg har brug for et knus",
     "en": "I need a hug",
     "fr": "j'ai besoin d'un câlin",
-    "nl": "Ik kan een knuffel gebruiken"
+    "nl": "Ik heb een knuffel nodig"
+  },
+
+  "grrr+": {
+    "dk": "Jeg har brug for et knus fra %s",
+    "en": "I need a hug from %s",
+    "fr": "j'ai besoin d'un câlin de %s",
+    "nl": "Ik heb een knuffel van %s nodig"
   },
 
   "roar": {
@@ -18,5 +32,12 @@
     "en": "I'm angry!",
     "fr": "Je suis en colère!",
     "nl": "Ik ben boos!"
+  },
+
+  "roar+": {
+    "dk": "Jeg er vred fra %s!",
+    "en": "I'm angry at %s!",
+    "fr": "Je suis en colère contre %s!",
+    "nl": "Ik ben boos op %s!"
   }
 }
