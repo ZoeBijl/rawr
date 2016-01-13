@@ -39,5 +39,12 @@
     "en": "I'm angry at %s!",
     "fr": "Je suis en colère contre %s!",
     "nl": "Ik ben boos op %s!"
+  },
+
+  "gro": {
+    "dk": "Jeg er sulten!",
+    "en": "I'm hungry!",
+    "fr": "J'ai faim!",
+    "nl": "Ik heb honger!"
   }
 }

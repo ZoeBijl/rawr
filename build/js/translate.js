@@ -65,6 +65,7 @@
       case 'rawr':
       case 'roar':
       case 'grrr':
+      case 'gro':
         translate(valueStart, valuePlus);
         break;
       default:
