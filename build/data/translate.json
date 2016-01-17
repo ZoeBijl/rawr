@@ -46,5 +46,11 @@
     "en": "I'm hungry!",
     "fr": "J'ai faim!",
     "nl": "Ik heb honger!"
+  },
+  "hmpf": {
+    "dk": "Kys",
+    "en": "Kiss",
+    "fr": "Baiser",
+    "nl": "Kus"
   }
 }
