@@ -61,11 +61,10 @@
     var valueStart = value.split(' ', 2)[0].toLowerCase();
     var valuePlus = value.split(' ', 2)[1];
 
-    switch (valueStart) {
-      case 'rawr':
-      case 'roar':
-      case 'grrr':
-      case 'gro':
+    var wordExists = data[valueStart];
+
+    switch (wordExists) {
+      case true:
         translate(valueStart, valuePlus);
         break;
       default:
