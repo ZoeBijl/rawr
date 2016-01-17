@@ -61,7 +61,7 @@
     var valueStart = value.split(' ', 2)[0].toLowerCase();
     var valuePlus = value.split(' ', 2)[1];
 
-    var wordExists = data[valueStart];
+    var wordExists = data[valueStart] != undefined;
 
     switch (wordExists) {
       case true:
